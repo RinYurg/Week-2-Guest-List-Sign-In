@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dynamic JS Clock</title>
+	<link rel="stylesheet" type="text/css" href="styles/styles.css">
+	<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+
+</head>
+<body>
+
+	<center><h1 id="words">Click this!</h1></center>
+
+	<!-- <div id="popup">
+		<h1> Want to subscribe?</h1>
+		Email: <input type="text"> <br>
+		<input type="submit">
+	</div> -->
+	<center><div id="circle"></div>
+
+	<center> <div id="secHand"></div> </center>
+	<center> <div id="mnsHand"></div> </center>
+	<center> <div id="hrsHand"></div> </center>
+
+
+<script type="text/javascript">
+	var myH1 = document.getElementById("words");
+	// var popup = document.getElementById("popup");
+	var hand = document.getElementById("hand");
+
+	myH1.addEventListener("click",showMe);
+
+	function showMe() {
+		var theDate = new Date();
+
+		var sec = theDate.getSeconds();
+		var hrs = theDate.getHours();
+		var mns = theDate.getMinutes();
+
+		myH1.innerHTML = "The time is : <span>" + hrs + "</span>:" + "<span>" + mns + "</span>" + ":" + "<span>" + sec + "</span>";
+
+		secHand.style.transform = "rotate(" + sec * 6 + "deg)";
+		mnsHand.style.transform = "rotate(" + mns * 6 + "deg)";
+		hrsHand.style.transform = "rotate(" + hrs * 6 + "deg)";
+
+
+
+	
+	}
+
+
+	setInterval(showMe ,1000);
+
+</script>
+
+
+
+
+</body>
+</html>

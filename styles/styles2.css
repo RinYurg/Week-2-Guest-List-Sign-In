@@ -1,0 +1,83 @@
+@import 'https://fonts.googleapis.com/css?family=Work+Sans:100';
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  background: #386;
+  height: 100vh;
+  overflow: hidden;
+  width: 100vw;
+}
+#clock{
+  border: 2px solid white;
+  border-radius: 50%;
+  height: 450px;
+  left: calc(50% - 226px);
+  position: relative;
+  top: calc(50% - 226px);
+  width: 450px;
+}
+#hours{
+  border-radius: 50%;
+  list-style: none;
+  height: 100%;
+  position: absolute;
+  transform-origin: center center;  
+  width: 100%;
+}
+.hour{
+  color: #fff;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 3.5em;
+  line-height: 50px;
+  position: absolute;
+  text-align: center;
+  width: 50px;
+}/*
+.hour:first-of-type{
+  left: calc(50% - 25px);
+  top: 2%;
+}
+.hour:nth-of-type(2){
+  right: 2%;
+  top: calc(50% - 25px);
+}
+.hour:nth-of-type(3){
+  bottom: 2%;
+  left: calc(50% - 25px);
+}
+.hour:last-of-type{
+  left: 2%;
+  top: calc(50% - 25px);
+}*/
+.hand{
+  background: #fff;
+  position: absolute;
+  transform: rotate(-90deg);
+}
+#sec-hand{
+  background: #ff4456;
+  border-radius: 3px;
+  height: 6px;
+  left: calc(50% - 3px);
+  top: calc(50% - 3px);
+  transform-origin: 3px 3px;
+  width: 200px;
+}
+#min-hand{
+  border-radius: 4px;
+  height: 8px;
+  left: calc(50% - 4px);
+  top: calc(50% - 4px);
+  transform-origin: 4px 4px;
+  width: 160px;
+}
+#hour-hand{
+  border-radius: 5px;
+  height: 10px;
+  left: calc(50% - 5px);
+  top: calc(50% - 5px);
+  transform-origin: 5px 5px;
+  width: 130px;
+}
